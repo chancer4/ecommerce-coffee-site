@@ -1,0 +1,44 @@
+//_HOME.SCSS
+//Home View Styling
+
+.navbar{
+	background:#8b4726;
+	margin-bottom:0px;
+	border: none;
+	border-radius:none;
+	.navbar-header{
+		margin-left: 75px;
+		img{
+		height:30px;
+		}
+	}
+	.navbar-right{
+		display: inline;
+		p {
+			color: white;
+			margin-top: 15px;
+			margin-right: 25px;
+			float: left;
+		}
+		button{
+			padding: 3px 9px;
+			margin-right: 25px;
+			margin-top: 15px;
+			font-size: 10px;
+			font-weight: 200;
+		}
+	}
+	
+}
+.container.A{
+	margin-left:0px;
+	margin-right:0px;
+	.coffeeText{
+		margin: 120px 0px 0px 75px;
+	}
+	height:250px;
+	color:white;
+	background-image: url("../../images/CupInBeans.jpg");
+	background-size: 100%;
+	background-position: 0px -200px;
+}

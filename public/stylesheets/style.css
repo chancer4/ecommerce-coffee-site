@@ -1,8 +1,49 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* line 4, ../../assets/compass/sass/views/_home.scss */
+.navbar {
+  background: #8b4726;
+  margin-bottom: 0px;
+  border: none;
+  border-radius: none;
+}
+/* line 9, ../../assets/compass/sass/views/_home.scss */
+.navbar .navbar-header {
+  margin-left: 75px;
+}
+/* line 11, ../../assets/compass/sass/views/_home.scss */
+.navbar .navbar-header img {
+  height: 30px;
+}
+/* line 15, ../../assets/compass/sass/views/_home.scss */
+.navbar .navbar-right {
+  display: inline;
+}
+/* line 17, ../../assets/compass/sass/views/_home.scss */
+.navbar .navbar-right p {
+  color: white;
+  margin-top: 15px;
+  margin-right: 25px;
+  float: left;
+}
+/* line 23, ../../assets/compass/sass/views/_home.scss */
+.navbar .navbar-right button {
+  padding: 3px 9px;
+  margin-right: 25px;
+  margin-top: 15px;
+  font-size: 10px;
+  font-weight: 200;
 }
 
-a {
-  color: #00B7FF;
+/* line 33, ../../assets/compass/sass/views/_home.scss */
+.container.A {
+  margin-left: 0px;
+  margin-right: 0px;
+  height: 250px;
+  color: white;
+  background-image: url("../../images/CupInBeans.jpg");
+  background-size: 100%;
+  background-position: 0px -200px;
+}
+/* line 36, ../../assets/compass/sass/views/_home.scss */
+.container.A .coffeeText {
+  margin: 120px 0px 0px 75px;
 }

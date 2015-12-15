@@ -1,5 +1,32 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	//- if (!user)
+	//- 	a(href="/login") Login
+	//- 	br
+	//- 	a(href="/register") Register
+	//- if (user)
+	//- 	p Congrats! You are logged in as #{user.username}
+	//- 	a(href="/logout") Logout
+	.navbar.navbar-default
+		.container-fluid
+			.navbar-header
+				a.navbar-brand(href='#')
+					img(src='./images/dc_roasters_200x124_lt.png')
+			
+			.navbar-right
+				p Welcome, User
+				a(href='/login')
+					button.btn.btn-primary(type='button') Logout
+	.container.A
+		.coffeeText
+			h4 A better way to grind
+			h6 freshly roasted coffee beans delivered weekly to your door
+	.container.B
+		.row.B
+			.col-xs-8.col-xs-offset-2
+				h4 We Source Coffee Beans from around the world and roast them fresh daily
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		
+
+
