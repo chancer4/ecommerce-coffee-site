@@ -1,0 +1,52 @@
+extends layout
+
+block content
+
+	#choices.container
+		#plan-wrapper
+			#choices-header tell us hat you want
+			#choices-sub-header shipping is free and you can skip any week
+			form(name="choices-form", action="/choices", method="post")
+				#choices-frequency.choices-block
+					.row
+						.choices-image.col-sm-6
+							image(src='/images/calendar.png')
+						.col-sm-6
+							h2.choices-label 1. Frequency
+							.choices-lower-text-wrapper
+								.choices-lower-text How often would you like to recieve beans?
+								select(id="frequency", name="frequency", class="form-control")
+									option(value="weekly", selected=('weekly' == currFrequency)) Weekly
+									option(value="biweekly",selected=('biweekly' == currFrequency)) Every Two weeks
+									option(value="monthly",selected=('monthly' == currFrequency)) monthly
+									option(value="quarterly",selected=('quarterly' == currFrequency)) quarterly
+									option(value="semiannually",selected=('semiannually' == currFrequency)) semi-anually
+									option(value="annually",selected=('annually' == currFrequency)) annually
+								.choices-help-text you can cancel or skip @ anytime
+
+				#choices-quantity.choices-block
+					.row
+						.choices-image.col-sm-6
+							image(src='/images/food-scale.png')
+						.col-sm-6
+							h2.choices-label 2. Quantity
+							.choices-lower-text-wrapper
+								.choices-lower-text How lbs. would you like per delivery(increments of .25lbs)?
+									input(type="number", step=".25",min="0", name="quarterPounds", value=currQuarterPounds, placeholder="10")
+								.choices-help-text you can cancel or skip @ anytime					
+				#choices-grind.choices-block
+					.row
+						.choices-image.col-sm-6
+							image(src='/images/beans.png')
+						.col-sm-6
+							h2.choices-label 3. Grind
+							.choices-lower-text-wrapper
+								.choices-lower-text How do you like your beans fround?
+								select(id="grind", name="grind", class="form-control")
+									option(value="veryFine",selected=('veryFine'==currGrind)) Very Fine
+									option(value="fine",selected=('fine'==currGrind)) Fine
+									option(value="mediumCourse",selected=('mediumCourse'==currGrind)) Med. Course
+									option(value="course",selected=('course'==currGrind)) Course
+									option(value="extraCourse",selected=('extraCourse'==currGrind)) Extra Course
+								.choices-help-text you can cancel or skip @ anytime	
+				input.btn.btn-primary.btn-lg(type='submit',name='submit')				

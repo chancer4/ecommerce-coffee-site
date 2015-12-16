@@ -101,7 +101,89 @@ router.get('/logout', function(req, res) {
     req.session.destroy();
     res.redirect('/');
 });
+// --------------------
+// ---------Choices---------
+// ------------------------
+router.get('/choices', function (req, res, next){
+    //make sure user is logged in
+    if(req.session.username){
+        //they do belong here
+        //check for preferences
+        Account.findOne(
+            {username : req.session.username },
+            function (err, doc){
+                var currQuarterPounds = doc.quarterPounds ? doc.quarterPounds : undefined
+                console.log("==========pounds============")
+                console.log(currQuarterPounds)
+                var currGrind = doc.grind ? doc.grind : undefined
+                var currFrequency = doc.frequency ? doc.frequency : undefined
+                res.render('choices', {user: req.session.username, currQuarterPounds : currQuarterPounds, currGrind:currGrind,currFrequency:currFrequency})
+            }
+            )
+    }else{
+        res.redirect('/')
+    }
+})
 
+router.post('/choices', function(req,res,next){
+    if(req.session.username){
+        //yes
+        var newGrind = req.body.grind;
+        var newFrequency = req.body.frequency;
+        var newPounds = req.body.quarterPounds;
 
+        Account.findOneAndUpdate(
+                { username : req.session.username },
+                { grind : newGrind },
+                { upsert : true },
+                function (err, account){
+                    if(err){
+                        res.send('there was error')
+                    }else{
+                        account.save
+                    }
+                }
+            )
+        Account.findOneAndUpdate(
+                { username : req.session.username },
+                { frequency : newFrequency },
+                { upsert : true },
+                function (err, account){
+                    if(err){
+                        res.send('there was error')
+                    }else{
+                        account.save
+                    }
+                }
+            )
+        Account.findOneAndUpdate(
+                { username : req.session.username },
+                { quarterPounds : newPounds },
+                { upsert : true },
+                function (err, account){
+                    if(err){
+                        res.send('there was error')
+                    }else{
+                        account.save
+                    }
+                }
+            )
+        res.send('welcome to delivery page')
+
+    }else {
+        res.render('/')
+    }
+})
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+

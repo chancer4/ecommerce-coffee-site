@@ -26,7 +26,7 @@ body {
 
 /* line 6, ../../compass/sass/layout/_header.scss */
 #header {
-  background: url('../images/CupInBeans.jpg?1441679937') no-repeat center;
+  background: url('../images/CupInBeans.jpg?1450275877') no-repeat center;
   background-size: cover;
   border-bottom: 1px solid #d8d3c8;
 }
@@ -152,7 +152,7 @@ body {
   width: 105px;
   padding-top: 65px;
   overflow: hidden;
-  background: url('../images/dc_roasters_105x65_lt.png?1441679937') no-repeat;
+  background: url('../images/dc_roasters_105x65_lt.png?1450275877') no-repeat;
 }
 /* line 128, ../../compass/sass/layout/_header.scss */
 #nav #right-wrapper {
@@ -201,7 +201,7 @@ body {
 #signup-wrapper a {
   color: #776050;
   font-weight: 700;
-  background: url('../images/menu-steps.png?1441679937') no-repeat;
+  background: url('../images/menu-steps.png?1450275877') no-repeat;
   background-size: 35px, auto;
   height: 30px;
   padding: 5px 0 0 40px;
@@ -211,7 +211,7 @@ body {
 /* line 181, ../../compass/sass/layout/_header.scss */
 #signup-wrapper .active a {
   color: #fff;
-  background-image: url('../images/menu-steps-active.png?1441679937');
+  background-image: url('../images/menu-steps-active.png?1450275877');
 }
 /* line 188, ../../compass/sass/layout/_header.scss */
 #signup-wrapper .welcome {
@@ -307,7 +307,7 @@ body {
   padding-top: 124px;
   overflow: hidden;
   margin: 0 auto;
-  background: url('../images/dc_roasters_200x124_lt.png?1441679937') no-repeat;
+  background: url('../images/dc_roasters_200x124_lt.png?1450275877') no-repeat;
 }
 
 /* line 26, ../../compass/sass/layout/_footer.scss */
@@ -457,7 +457,7 @@ h2.how-it-works_label {
 
 /* line 87, ../../compass/sass/views/_home.scss */
 .how-it-works-one {
-  background: url('../images/CoffeeBags.jpg?1441679937') center bottom no-repeat;
+  background: url('../images/CoffeeBags.jpg?1450275877') center bottom no-repeat;
   background-size: cover;
   position: relative;
   color: #fff;
@@ -474,12 +474,12 @@ h2.how-it-works_label {
   left: 50%;
   margin-left: -31px;
   z-index: 1;
-  background: url('../images/CoffeeBags_corner.png?1441679937') center top no-repeat;
+  background: url('../images/CoffeeBags_corner.png?1450275877') center top no-repeat;
 }
 
 /* line 108, ../../compass/sass/views/_home.scss */
 .how-it-works-two {
-  background: url('../images/canvas.jpg?1441679937') center bottom repeat;
+  background: url('../images/canvas.jpg?1450275877') center bottom repeat;
   position: relative;
 }
 /* line 112, ../../compass/sass/views/_home.scss */
@@ -498,12 +498,12 @@ h2.how-it-works_label {
   left: 50%;
   margin-left: -31px;
   z-index: 1;
-  background: url('../images/canvas_corner.png?1441679937') center top no-repeat;
+  background: url('../images/canvas_corner.png?1450275877') center top no-repeat;
 }
 
 /* line 131, ../../compass/sass/views/_home.scss */
 .how-it-works-three {
-  background: url('../images/cupSteam.jpg?1441679937') right bottom no-repeat #000;
+  background: url('../images/cupSteam.jpg?1450275877') right bottom no-repeat #000;
   background-size: contain;
   position: relative;
   color: #fff;
@@ -611,4 +611,38 @@ h2.how-it-works_label {
     width: 85%;
     margin: 0 auto;
   }
+}
+/* line 6, ../../compass/sass/views/_choices.scss */
+#plan-wrapper {
+  margin-top: 60px;
+}
+/* line 8, ../../compass/sass/views/_choices.scss */
+#plan-wrapper #choices-header {
+  margin: 0 0 8px;
+  font-size: 32px;
+  line-height: 1.2;
+  text-align: center;
+}
+/* line 14, ../../compass/sass/views/_choices.scss */
+#plan-wrapper #choices-sub-header {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+}
+/* line 21, ../../compass/sass/views/_choices.scss */
+#plan-wrapper .choices-image {
+  text-align: center;
+}
+/* line 23, ../../compass/sass/views/_choices.scss */
+#plan-wrapper .choices-image img {
+  max-width: 100%;
+}
+/* line 27, ../../compass/sass/views/_choices.scss */
+#plan-wrapper .choices-block {
+  border: 1px solid #d8d3c8;
+  border-radius: 5px;
+  margin: 30px auto;
+  padding: 30px;
 }
