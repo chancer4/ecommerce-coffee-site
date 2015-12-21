@@ -2,3 +2,32 @@
 // _CHOICES.SCSS
 // Choices View Styles
 // -------------------------------
+
+#plan-wrapper{
+	margin-top: 60px;
+	#choices-header{
+		margin: 0 0 8px;
+		font-size: 32px;
+		line-height: 1.2;
+		text-align: center;
+	}
+	#choices-sub-header{
+		margin:0;
+		font-size: 20px;
+		font-weight: 300;
+		line-height: 1.4;
+		text-align: center;
+	}
+	.choices-image{
+		text-align: center;
+		img{
+			max-width: 100%;
+		}
+	}
+	.choices-block{
+		border: 1px solid darken($cream,10%);
+		border-radius: 5px;
+		margin: 30px auto;
+		padding: 30px;
+	}
+}

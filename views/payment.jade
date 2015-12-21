@@ -1,0 +1,80 @@
+extends layout
+
+block content
+
+ .navigation-bar
+    .navigation-bar-left
+        a(href='/')
+            img(src='./images/dc_roasters_200x124_lt.png')
+    .navigation-bar-right
+        if (!username)
+            a(href="/login")
+                button.btn.btn-success(type="submit") Login
+            a(href="/register")    
+                button.btn.btn-primary(type="submit") Register
+        if (username)
+            p Welcome, 
+                a(href="/account") #{username}!
+            a(href="/logout") 
+                button.btn.btn-danger(type="submit") Logout
+  .navigation-bar-small
+        .icon-holder
+            a(href="/")
+                .one
+                .icons 1. Welcome
+            a(href="/choices")
+                .two
+                .icons 2. Options
+            a(href="/shipping")
+                .three
+                .icons 3. Delivery
+            a(href="/payment")
+                .four.active
+                .icons.active 4. Payment
+  #payment.container
+     #payment-wrapper
+        #payment-header Payment 
+        #payment-sub-header Order summary below
+        .payment-block.col-xs-12
+            h2.payment-label Choices
+            .choices-holder
+                p Grind
+                p Frequency of Delivery
+                p Coffee, In Pounds 
+            .data-holder
+                p #{grind}
+                p #{frequency}
+                p.margin #{quarterPounds}
+            h2.payment-label Delivery Information
+            .choices-holder
+                p Full Name
+                p Address
+                p Address2
+                p City
+                p State
+                p Zip
+                p Delivery Date
+            .data-holder
+                p #{fullName}
+                p #{address1}
+                p #{address2}
+                p #{city}
+                p #{state}
+                p #{zipCode}
+                p.margin #{deliveryDate}
+            h2.payment-label Current Charge
+            .choices-holder
+                p Quantity
+                p Shipping
+                p.total Total
+            .data-holder
+                p #{quarterPounds}lbs x $19.99/lb = $#{charge}
+                p $5.95
+                p.total $#{totalCharge}
+        .button-holder.col-xs-12
+          form.paymentsubmit(name="payment", action="/payment", method="post")
+            script.stripe-button(src="https://checkout.stripe.com/checkout.js", data-key=(key), data-image="http://stripe.com/img/documentation/checkout/marketplace.png", data-name="Demo Site", data-description="2 widgets", data-amount=(totalCharge*100), data-locale="auto")   
+        .paymentsubmit
+            a(href="/")
+              input(type="button" value="Cancel Order")
+  extends footer
